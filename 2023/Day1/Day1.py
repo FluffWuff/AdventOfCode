@@ -15,7 +15,7 @@ def first():
 
     print(f"First: {sum}")
 
-
+#Not solved yet
 def second():
     sum = 0
     wordNumbers = {"one": "1", "two": "2", "three": "3", "four": "4",
