@@ -22,13 +22,17 @@ def second():
                    "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9"}
 
     for _, v in enumerate(input.split("\n")):
+        numberIndicies = {}
+        value = list(v)
         for word, number in wordNumbers.items():
-            w = word[::-1]
-            v2 = v[::-1]
-            if w in v2:
-                v = v.replace(word, number)
-            if word in v:
-                v = v.replace(word, number)
+            index = v.find(word)
+            print(index)
+            while not index == -1:
+                value[index] = number
+                index = v.find(word)
+                
+        v = "".join(value)
+        print(v)
          
 
         digitNumbers = re.findall(r"\d+", v)
